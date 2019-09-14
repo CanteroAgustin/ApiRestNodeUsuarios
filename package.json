@@ -1,26 +1,17 @@
 {
   "name": "apirestnodeusuarios",
-  "version": "1.0.0",
-  "description": "api de usuarios",
-  "main": "app.js",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "method-override": "^3.0.0",
-    "mongoose": "^5.7.1"
-  },
-  "devDependencies": {},
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CanteroAgustin/ApiRestNodeUsuarios.git"
-  },
-  "author": "Agustin Cantero",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CanteroAgustin/ApiRestNodeUsuarios/issues"
-  },
-  "homepage": "https://github.com/CanteroAgustin/ApiRestNodeUsuarios#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1"
+  }
 }
