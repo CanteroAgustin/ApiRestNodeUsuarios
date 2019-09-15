@@ -25,7 +25,7 @@ router.get('/', function (req, res, next) {
 
 /* GET users listing. */
 router.post('/', function (req, res, next) {
-  var body = {nombre:req.body.name,apellido:req.body.apellido,userName:req.body.userName,password:req.body.password,
+  var body = {nombre:req.body.nombre,apellido:req.body.apellido,userName:req.body.userName,password:req.body.password,
     rol:req.body.rol,documento:req.body.documento,foto:req.body.foto}
   
     con.query('INSERT INTO usuarios SET ?',body, function (err, result) {
