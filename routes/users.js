@@ -10,6 +10,10 @@ var con = mysql.createConnection({
   database: "u933428110_apies"
 });
 
+con.on('error', function (err) {
+  console.log('error en base de datos: ' + err.toString());
+});
+
 /* GET users listing. */
 router.get('/', function (req, res, next) {
   var sql = "SELECT * from usuarios";
