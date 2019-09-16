@@ -13,15 +13,14 @@ var con = mysql.createConnection({
 /* GET users listing. */
 router.get('/', function (req, res, next) {
   var sql = "SELECT * from usuarios";
-  var resultado;
   con.query(sql, function (err, result) {
     if (err) {
       console.log(err);
     }
     console.log("Result: " + JSON.stringify(result));
-    resultado = result;
+    res.send(result);
   });
-  res.send(resultado);
+  
   req.abort();
   res.end();
 });
