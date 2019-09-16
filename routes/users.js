@@ -16,11 +16,10 @@ router.get('/', function (req, res, next) {
   
     con.query(sql, function (err, result) {
       if (err){
-        console.log(err);
+        next(err);
       } 
       console.log("Result: " + JSON.stringify(result));
       res.send(result);
-      next();
     });
 });
 
@@ -31,11 +30,10 @@ router.post('/', function (req, res, next) {
   
     con.query('INSERT INTO usuarios SET ?',body, function (err, result) {
       if (err){
-        console.log(err);
+        next(err);
       } 
       console.log("Result: " + JSON.stringify(result));
       res.send(result);
-      next();
     });
 });
 
