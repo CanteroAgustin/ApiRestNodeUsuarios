@@ -20,8 +20,6 @@ router.get('/', function (req, res, next) {
     console.log("Result: " + JSON.stringify(result));
     res.send(result);
   });
-  
-  req.abort();
   res.end();
 });
 
