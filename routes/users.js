@@ -10,8 +10,15 @@ var con = mysql.createConnection({
   database: "u933428110_apies"
 });
 
+var connection;
+
 function handleDisconnect() {
-  connection = mysql.createConnection(db_config); // Recreate the connection, since
+  connection = con.createConnection({
+    host: "sql124.main-hosting.eu",
+    user: "u933428110_agus",
+    password: "SANiSZULC8cs",
+    database: "u933428110_apies"
+  }); // Recreate the connection, since
                                                   // the old one cannot be reused.
 
   connection.connect(function(err) {              // The server is either down
@@ -30,6 +37,8 @@ function handleDisconnect() {
     }
   });
 }
+
+handleDisconnect();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
