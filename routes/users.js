@@ -30,7 +30,7 @@ var disconnect = function() {
       disconnect();
   });
  };
- handleKFDisconnect();
+ disconnect();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
