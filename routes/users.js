@@ -22,7 +22,7 @@ router.get('/', function (req, res, next) {
     if (err) {
       next(err);
     }
-    console.log("Result: " + JSON.stringify(result));
+    console.log("Invocacion por Get, Result: " + JSON.stringify(result));
     res.send(result);
   });
 });
