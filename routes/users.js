@@ -20,6 +20,7 @@ router.get('/', function (req, res, next) {
       } 
       console.log("Result: " + JSON.stringify(result));
       res.send(result);
+      res.end();
     });
 });
 
@@ -34,6 +35,7 @@ router.post('/', function (req, res, next) {
       } 
       console.log("Result: " + JSON.stringify(result));
       res.send(result);
+      res.end();
     });
 });
 
