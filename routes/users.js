@@ -13,16 +13,17 @@ var con = mysql.createConnection({
 /* GET users listing. */
 router.get('/', function (req, res, next) {
   var sql = "SELECT * from usuarios";
-
+  var result;
   con.query(sql, function (err, result) {
     if (err) {
       console.log(err);
     }
     console.log("Result: " + JSON.stringify(result));
-    res.send(result);
-    res.end();
+    this.result = result;
   });
+  res.send(this.result);
   req.abort();
+  res.end();
 });
 
 /* GET users listing. */
@@ -37,10 +38,11 @@ router.post('/', function (req, res, next) {
       console.log(err);
     }
     console.log("Result: " + JSON.stringify(result));
-    res.send(result);
-    res.end();
+    //res.send(result);
+    //res.end();
   });
   req.abort();
+  res.end();
 });
 
 module.exports = router;
